@@ -32,6 +32,6 @@ struct WeatherWeekView: View {
 
 struct WeatherWeekView_Previews: PreviewProvider {
     static var previews: some View {
-        WeatherWeekView(weekTempData: WeatherInfoDaily.randomData.first!)
+        WeatherWeekView(weekTempData: WeatherInfoDaily.dummyData.first!)
     }
 }

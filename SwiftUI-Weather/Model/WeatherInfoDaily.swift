@@ -15,7 +15,7 @@ struct WeatherInfoDaily {
 
 extension WeatherInfoDaily{
     
-    static let randomData: [WeatherInfoDaily] = [
+    static let dummyData: [WeatherInfoDaily] = [
     
         .init(dayOfWeek: "TUE", imageName: "sun.max.fill", temperature: 76),
         .init(dayOfWeek: "WED", imageName: "cloud.sun.fill", temperature: 70),
