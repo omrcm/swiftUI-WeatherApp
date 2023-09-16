@@ -80,6 +80,7 @@
 		E1280CFE2AB5F616005BE456 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E1BB6C0E2AB5285700C88DF2 /* WeatherButton.swift */,
 				E1280D012AB5F6C6005BE456 /* WeatherWeekView.swift */,
 			);
 			path = Views;
@@ -122,7 +123,6 @@
 				E1BB6BE62AB4DD1900C88DF2 /* ContentView.swift */,
 				E1BB6BE82AB4DD1A00C88DF2 /* Assets.xcassets */,
 				E1BB6BEA2AB4DD1A00C88DF2 /* Preview Content */,
-				E1BB6C0E2AB5285700C88DF2 /* WeatherButton.swift */,
 			);
 			path = "SwiftUI-Weather";
 			sourceTree = "<group>";
