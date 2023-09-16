@@ -1,8 +1,10 @@
 import SwiftUI
 
+
 struct ContentView: View {
     
     @State private var isNight = false
+    @State private var randomData: [WeatherInfoDaily] = WeatherInfoDaily.randomData
     
     var body: some View {
         ZStack {
@@ -14,12 +16,11 @@ struct ContentView: View {
                 CurrentTemperature(imageName: isNight ? "moon.stars.fill" : "cloud.sun.fill", temperature: 76)
                 
                 HStack(spacing: 20){
-                    WeatherDayView(dayOfWeek: "TUE", imageName: "sun.max.fill", temperature: 76)
-                    WeatherDayView(dayOfWeek: "WED", imageName: "cloud.sun.fill", temperature: 70)
-                    WeatherDayView(dayOfWeek: "THU", imageName: "wind.snow", temperature: 55)
-                    WeatherDayView(dayOfWeek: "FRI", imageName: "sunset.fill", temperature: 72)
-                    WeatherDayView(dayOfWeek: "SAT", imageName: "sun.dust.fill", temperature: 66)
+                    ForEach(randomData, id: \.dayOfWeek) { datum in
+                        WeatherWeekView(weekTempData: datum)
+                    }
                 }
+                
                 Spacer()
                 
                 Button{
