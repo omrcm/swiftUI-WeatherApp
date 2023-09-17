@@ -23,15 +23,25 @@ struct WeatherWeekView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
             
-            Text("\(weekTempData.temperature)°")
+            Text(formatTemp(temp: weekTempData.temperature))
                 .font(.system(size: 28, weight: .medium))
                 .foregroundColor(.white)
         }
+    }
+    
+    private func formatTemp(temp: Double) -> String{
+        let formatter = MeasurementFormatter.self()
+        formatter.unitOptions = .temperatureWithoutUnit
+        
+        let tempInDegrees = Measurement(value: temp, unit: UnitTemperature.celsius)
+        return formatter.string(from: tempInDegrees)
     }
 }
 
 struct WeatherWeekView_Previews: PreviewProvider {
     static var previews: some View {
         WeatherWeekView(weekTempData: WeatherInfoDaily.dummyData.first!)
+            .previewLayout(.sizeThatFits)
+            .background(.black)
     }
 }

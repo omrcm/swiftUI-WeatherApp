@@ -10,7 +10,7 @@ import Foundation
 struct WeatherInfoDaily {
     let dayOfWeek: String
     let imageName: String
-    let temperature: Int
+    let temperature: Double
 }
 
 extension WeatherInfoDaily{

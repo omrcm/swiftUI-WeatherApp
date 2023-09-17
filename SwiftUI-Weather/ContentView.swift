@@ -15,10 +15,18 @@ struct ContentView: View {
                 
                 CurrentTemperature(imageName: isNight ? "moon.stars.fill" : "cloud.sun.fill", temperature: 76)
                 
-                HStack(spacing: 20){
-                    ForEach(weeklyTemp, id: \.dayOfWeek) { datum in
-                        WeatherWeekView(weekTempData: datum)
+                /*
+                ScrollView(.horizontal){
+                    LazyHStack(spacing: 25){
+
                     }
+                }
+                 */
+                
+                HStack(spacing: 20){
+                     ForEach(weeklyTemp, id: \.dayOfWeek) { datum in
+                         WeatherWeekView(weekTempData: datum)
+                     }
                 }
                 
                 Spacer()
